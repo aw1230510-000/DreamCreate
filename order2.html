@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamCreate-order</title>
+</head>
+<body class="wf-mplus1p">
+    <div id="pclogo">
+        <a href=""><img src="../main/img/logo.svg" alt="ロゴ" width="100%" ></a>    
+        <img src="../main/img/decoration/decoration3.png" alt="" class="deco3">
+    </div>
+    <div id="pcnav">
+        <ul class="pcnav_list">
+            <li><a href="#company">COMPANY</a></li>
+            <li><a href="#performance">PERFORMANCE</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+    </div>
+    <div>
+    </div>
+    <div id="main">
+        <nav class="nav">
+            <ul>
+                <li><a href="../index.html">TOP</a></li>
+                <li><a href="#company">COMPANY</a></li>
+                <li><a href="#performance">PERFORMANCE</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+        <button type="button" id="navbtn"></button>
+        <div id="top_img">
+            <img src="../main/img/main_logo.png" alt="本女" width="80%">
+        </div>
+        <div class="text_info">
+
+    <h1>送信されたデータ</h1>
+    
+    <p><strong>名前:</strong> <span id="displayName"></span></p>
+    <p><strong>メールアドレス:</strong> <span id="displayEmail"></span></p>
+    <p><strong>電話番号:</strong> <span id="displayPhone"></span></p>
+    <p><strong>コメント:</strong> <span id="displayComments"></span></p>
+
+    <script>
+        // URLのクエリパラメータを取得
+        const urlParams = new URLSearchParams(window.location.search);
+
+        // 各パラメータを取得
+        const name = urlParams.get('name');
+        const email = urlParams.get('email');
+        const phone = urlParams.get('phone');
+        const comments = urlParams.get('comments');
+
+        // HTML要素に値を設定
+        document.getElementById('displayName').textContent = name;
+        document.getElementById('displayEmail').textContent = email;
+        document.getElementById('displayPhone').textContent = phone;
+        document.getElementById('displayComments').textContent = comments;
+    </script>
+        </div>
+        <footer>
+            <div id="footer-box">
+                <a href="page/privacy.html" class="foobox" target="_blank">privacypolicy</a>
+                <img src="main/img/decoration/decoration_flower.png" alt="">
+                <a href="page/form.html" class="foobox">recruit</a>
+                <img src="main/img/decoration/decoration_flower.png" alt="">
+                <a href="" class="foobox">company</a>
+            </div>
+            <p>&copy;2024 Dream Create All Rights Reserved.</p>
+        </footer>
+    </div>
+    <script src="js/index.js"></script>
+    <script src="js/humberger.js"></script>
+</body>
+</html>

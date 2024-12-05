@@ -1,0 +1,39 @@
+@charset "utf-8";
+ 
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+
+    .item {
+        margin-bottom: 10px; /* 各項目の間隔を調整 */
+    
+        .overviewbtn {
+            display: inline;
+            cursor: pointer;
+            color: #333;
+            border-bottom: #def4ff solid 2px;
+            transition: background-color 0.3s, transform 0.2s; /* アニメーション */
+        }
+        
+        .overviewbtn:hover {
+            transform: scale(1.02); /* ホバー時に少し大きくなる */
+            color: #bb3232;
+        }
+        
+        .overview {
+            margin-top: 10px;
+            padding: 10px;
+            display: none; /* 初期状態では非表示 */
+            color: #666;
+            text-align: left;
+            border-radius: 12px; /* 角を丸める */
+            border: #eabbcc 5px solid;
+        }    
+    }    
+}
